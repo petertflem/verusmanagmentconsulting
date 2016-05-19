@@ -7,3 +7,15 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  customizer-child
 */
+
+/* Centers the logo and menu */
+.navbar-inner,
+.tc-header {
+  display: flex;
+  align-items: center;
+}
+
+.blog-list-page .blog-post img {
+  max-height: 300px;
+  max-width: 200px;
+}
