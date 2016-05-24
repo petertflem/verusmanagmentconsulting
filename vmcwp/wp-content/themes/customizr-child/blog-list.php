@@ -52,7 +52,11 @@
               </div>
 
             <?php }
-          } ?>
+          } else { ?>
+            <div class="row-fluid>">
+              <p class="no-blog-entries-text">Det finnes ingen bloginlegg.</p>
+            </div>
+          <?php } ?>
 
         <?php do_action( '__after_loop' );##hook of the comments and the posts navigation with priorities 10 and 20 ?>
 

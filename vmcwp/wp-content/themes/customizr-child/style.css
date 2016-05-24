@@ -15,8 +15,13 @@
   align-items: center;
 }
 
+/* BLOG LIST PAGE */
 .blog-list-page .blog-post {
   min-height: 160px;
+}
+
+.blog-list-page .no-blog-entries-text {
+  font-style: italic;
 }
 
 .blog-list-page .blog-post:not(:first-child) {
