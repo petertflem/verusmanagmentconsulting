@@ -5,7 +5,7 @@
 ?>
 
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
-<div id="main-wrapper blog-list-page" class="<?php echo implode(' ', apply_filters( 'tc_main_wrapper_classes' , array('container') ) ) ?>">
+<div id="main-wrapper" class="blog-list-page <?php echo implode(' ', apply_filters( 'tc_main_wrapper_classes' , array('container') ) ) ?>">
 
   <?php do_action( '__before_main_container' ); ##hook of the featured page (priority 10) and breadcrumb (priority 20)...and whatever you need! ?>
 
@@ -17,6 +17,12 @@
 
       <div id="content" class="<?php echo implode(' ', apply_filters( 'tc_article_container_class' , array( TC_utils::tc_get_layout(  TC_utils::tc_id() , 'class' ) , 'article-container' ) ) ) ?>">
 
+        <div class="row-fluid">
+          <h1>
+            <?php the_title(); ?>
+          </h1>
+        </div>
+
         <?php do_action( '__before_loop' );##hooks the header of the list of post : archive, search... ?>
 
         <?php
@@ -27,7 +33,7 @@
               setup_postdata($post); ?>
 
               <div class="row-fluid blog-post">
-                <div class="span3">
+                <div class="span4">
                   <?php
                     // check if the post has a Post Thumbnail assigned to it.
                     if (has_post_thumbnail()) {
@@ -35,9 +41,13 @@
                     }
                   ?>
                 </div>
-                <div class="span9">
-                  <?php the_title(); ?>
-                  <?php the_excerpt(); ?>
+                <div class="span8">
+                  <h2>
+                    <?php the_title(); ?>
+                  </h2>
+                  <p>
+                    <?php the_excerpt(); ?>
+                  </p>
                 </div>
               </div>
 

@@ -15,7 +15,20 @@
   align-items: center;
 }
 
-.blog-list-page .blog-post img {
-  max-height: 300px;
-  max-width: 200px;
+.blog-list-page .blog-post {
+  min-height: 160px;
+}
+
+.blog-list-page .blog-post:not(:first-child) {
+  margin-top: 20px;
+}
+
+.blog-list-page .blog-post h2 {
+  line-height: 25px;
+}
+
+@media (min-width: 767px) {
+  .blog-list-page .blog-post h2 {
+    margin-top: 0;
+  }
 }
