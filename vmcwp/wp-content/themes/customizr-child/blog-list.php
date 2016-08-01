@@ -33,22 +33,28 @@
               setup_postdata($post); ?>
 
               <div class="row-fluid blog-post">
-                <div class="span4">
-                  <?php
-                    // check if the post has a Post Thumbnail assigned to it.
-                    if (has_post_thumbnail()) {
-                      the_post_thumbnail();
-                    }
-                  ?>
-                </div>
-                <div class="span8">
-                  <h2>
-                    <?php the_title(); ?>
-                  </h2>
-                  <p>
-                    <?php the_excerpt(); ?>
-                  </p>
-                </div>
+                <a href="<?php the_permalink(); ?>">
+                    <?php
+                      // check if the post has a Post Thumbnail assigned to it.
+                      if (has_post_thumbnail()) {
+                        ?>
+                        <div class="span4 image-container">
+                          <div class="image" style="background: url('<?php echo the_post_thumbnail_url(); ?>')"></div>
+                        </div>
+                        <?php
+                        //the_post_thumbnail();
+
+                      }
+                    ?>
+                  <div class="<?php echo (has_post_thumbnail() ? 'span8' : 'span12'); ?>">
+                    <h2>
+                      <?php the_title(); ?>
+                    </h2>
+                    <p>
+                      <?php the_excerpt(); ?>
+                    </p>
+                  </div>
+                </a>
               </div>
 
             <?php }

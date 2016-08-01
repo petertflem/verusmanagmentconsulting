@@ -15,25 +15,240 @@
   align-items: center;
 }
 
-/* BLOG LIST PAGE */
-.blog-list-page .blog-post {
-  min-height: 160px;
+.reb1 {
+  background: url('assets/images/reb1.jpg');
 }
 
-.blog-list-page .no-blog-entries-text {
-  font-style: italic;
+.reb2 {
+  background: url('assets/images/reb2.jpg');
 }
 
-.blog-list-page .blog-post:not(:first-child) {
-  margin-top: 20px;
+.reb3 {
+  background: url('assets/images/reb3.jpg');
 }
 
-.blog-list-page .blog-post h2 {
+.reb4 {
+  background: url('assets/images/reb4.jpg');
+}
+
+.open-contact-form {
+  margin-bottom: 0;
+  margin-top: 14px;
+  text-align: right;
+  text-decoration: underline;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.contact-form {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+  .visible-phone .reb2 {
+    width: 80%;
+    text-align: center;
+  }
+
+  .contact-page,
+  .open-contact-form {
+    text-align: center;
+  }
+
+  img.profile-picture {
+    width: 258px;
+  }
+}
+
+.contact-picture {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 250px;
+  height: 250px;
+}
+
+.contact-information.hidden-phone {
+  font-size: 18px;
+}
+
+.phonenumber, .email, .linkedin {
+  font-size: 17px;
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+  .contact-information.hidden-phone {
+    font-size: 17px;
+  }
+
+  .phonenumber, .email, .linkedin {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .contact-information.hidden-phone {
+    font-size: 16px;
+  }
+
+  .phonenumber, .email, .linkedin {
+    font-size: 15px;
+  }
+}
+
+.contact-page .name {
+  font-weight: 900;
+}
+
+.contact-information.visible-phone ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin: 0;
+}
+
+.contact-information.visible-phone .name {
+  font-size: 20px;
+}
+
+.contact-information.visible-phone li:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.contact-information.visible-phone li.title {
+  margin-bottom: 5px;
+}
+
+.contact-page .title {
+  font-weight: 600;
+}
+
+.contact-page .contact-information a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#tc-page-wrap {
+  position: static;
+}
+
+body {
+  position: relative;
+}
+
+.contact-information-list {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.contact-information-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -1px;
+    list-style: none;
+    padding: 0;
+}
+.contact-information-list li {
+    flex-grow: 0.1;
+    flex-basis: auto;
+}
+
+.contact-information-list li:not(:first-child) {
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+/* MODAL */
+#toggle-modal{
+  position: absolute;
+  left: -999999px;
+}
+
+.modal{
+  display: none;
+}
+
+.modal-background{
+  display: none;
+}
+
+#toggle-modal:checked ~ .modal{
+  display: block;
+}
+
+#toggle-modal:checked ~ .modal-background{
+  display: block;
+}
+
+.modal-background{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 101;
+  margin: 0;
+}
+
+.modal-body {
+  max-height: none;
+}
+
+/* FORM */
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus {
+  box-shadow: none;
+}
+
+div.wpcf7-response-output,
+form.wpcf7-form {
+  margin: 0;
+  padding: 0;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ok {
+  border: none;
+}
+
+/* ARTICLE PAGE TEMPLLATE */
+.article p,
+.article ul li {
   line-height: 25px;
 }
 
-@media (min-width: 767px) {
-  .blog-list-page .blog-post h2 {
-    margin-top: 0;
-  }
+/* BLOG LIST PAGE */
+.blog-list-page .blog-post {
+
+}
+
+.blog-list-page .blog-post a {
+  display: block;
+  height: calc(100% - 1px);
+}
+
+.blog-list-page .blog-post:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.blog-list-page .blog-post .image-container {
+  position: relative;
+}
+
+.blog-list-page .blog-post .image-container .image {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.blog-list-page .blog-post h2 {
+  margin-top: 0;
 }
