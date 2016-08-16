@@ -32,16 +32,10 @@
 }
 
 .open-contact-form {
-  margin-bottom: 0;
-  margin-top: 14px;
-  text-align: right;
   text-decoration: underline;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: bold;
   text-transform: uppercase;
-}
-
-.contact-form {
-  margin-bottom: 5px;
 }
 
 @media (max-width: 767px) {
@@ -220,35 +214,4 @@ div.wpcf7-mail-sent-ok {
 .article p,
 .article ul li {
   line-height: 25px;
-}
-
-/* BLOG LIST PAGE */
-.blog-list-page .blog-post {
-
-}
-
-.blog-list-page .blog-post a {
-  display: block;
-  height: calc(100% - 1px);
-}
-
-.blog-list-page .blog-post:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.blog-list-page .blog-post .image-container {
-  position: relative;
-}
-
-.blog-list-page .blog-post .image-container .image {
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-}
-
-.blog-list-page .blog-post h2 {
-  margin-top: 0;
 }

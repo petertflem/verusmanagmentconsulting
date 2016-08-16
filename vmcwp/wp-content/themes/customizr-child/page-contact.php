@@ -46,30 +46,6 @@ Template Name: Contact Page
                     </ul>
                   </div>
 
-                  <div class="row-fluid contact-form">
-                    <div class="span12">
-                      <label role="button" class="open-contact-form" for="toggle-modal">Kontaktskjema</label>
-                      <input type="checkbox" id="toggle-modal" />
-
-                      <label role="button" class="modal-background" for="toggle-modal"></label>
-
-                      <div class="modal">
-                        <div class="modal-header">
-                          <h2>Kontaktskjema</h2>
-                        </div>
-                        <div class="modal-body">
-                          <?php if (have_posts()) : while (have_posts()) : the_post();?>
-                            <?php the_content(); ?>
-                          <?php endwhile; endif; ?>
-                        </div>
-                        <div class="modal-footer">
-                          <label class="btn" for="toggle-modal" role="button">Lukk</label>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
                   <div class="row-fluid hidden-phone">
                     <div class="span3 reb1 contact-picture"></div>
                     <div class="span3 reb2 contact-picture"></div>
@@ -90,6 +66,26 @@ Template Name: Contact Page
                         </li>
                         <li class="linkedin">
                           <a href="#">LinkedIn</a>
+                        </li>
+                        <li>
+                          <label role="button" class="open-contact-form" for="toggle-modal">Kontaktskjema</label>
+                          <input type="checkbox" id="toggle-modal" />
+
+                          <label role="button" class="modal-background" for="toggle-modal"></label>
+
+                          <div class="modal">
+                            <div class="modal-header">
+                              <h2>Kontaktskjema</h2>
+                            </div>
+                            <div class="modal-body">
+                              <?php if (have_posts()) : while (have_posts()) : the_post();?>
+                                <?php the_content(); ?>
+                              <?php endwhile; endif; ?>
+                            </div>
+                            <div class="modal-footer">
+                              <label class="btn" for="toggle-modal" role="button">Lukk</label>
+                            </div>
+                          </div>
                         </li>
                       </ul>
                     </div>
