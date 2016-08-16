@@ -30,22 +30,6 @@ Template Name: Contact Page
 
                 <div id="content" class="<?php echo implode(' ', apply_filters( 'tc_article_container_class' , array( TC_utils::tc_get_layout(  TC_utils::tc_id() , 'class' ) , 'article-container' ) ) ) ?>">
 
-                  <div class="row-fluid contact-information visible-phone">
-                    <ul>
-                      <li class="name">Rebecca Hansen</li>
-                      <li class="title">Lederutvikler</li>
-                      <li>
-                        <a href="tel:+4793845559">+47 938 45 559</a>
-                      </li>
-                      <li>
-                        <a href="mailto:rebecce@vmc.no">rebecce@vmc.no</a>
-                      </li>
-                      <li>
-                        <a href="#">LinkedIn</a>
-                      </li>
-                    </ul>
-                  </div>
-
                   <div class="row-fluid hidden-phone">
                     <div class="span3 reb1 contact-picture"></div>
                     <div class="span3 reb2 contact-picture"></div>
@@ -97,6 +81,42 @@ Template Name: Contact Page
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/reb2.jpg" class="profile-picture" alt="Bilde av Rebecca Hansen" />
                       </div>
                     </div>
+                  </div>
+
+                  <div class="row-fluid contact-information visible-phone">
+                    <ul>
+                      <li class="name">Rebecca Hansen</li>
+                      <li class="title">Lederutvikler</li>
+                      <li>
+                        <a href="tel:+4793845559">+47 938 45 559</a>
+                      </li>
+                      <li>
+                        <a href="mailto:rebecce@vmc.no">rebecce@vmc.no</a>
+                      </li>
+                      <li>
+                        <a href="#">LinkedIn</a>
+                      </li>
+                      <li class="contact-form-mobile">
+                        <label role="button" class="open-contact-form" for="toggle-modal">Kontaktskjema</label>
+                        <input type="checkbox" id="toggle-modal" />
+
+                        <label role="button" class="modal-background" for="toggle-modal"></label>
+
+                        <div class="modal">
+                          <div class="modal-header">
+                            <h2>Kontaktskjema</h2>
+                          </div>
+                          <div class="modal-body">
+                            <?php if (have_posts()) : while (have_posts()) : the_post();?>
+                              <?php the_content(); ?>
+                            <?php endwhile; endif; ?>
+                          </div>
+                          <div class="modal-footer">
+                            <label class="btn" for="toggle-modal" role="button">Lukk</label>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
 
                 </div><!--.article-container -->

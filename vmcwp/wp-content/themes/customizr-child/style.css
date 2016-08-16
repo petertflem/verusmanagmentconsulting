@@ -44,6 +44,10 @@
     text-align: center;
   }
 
+  .contact-page {
+      margin-top: 20px;
+  }
+
   .contact-page,
   .open-contact-form {
     text-align: center;
@@ -58,6 +62,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 0px;
 
   width: 250px;
   height: 250px;
@@ -93,6 +98,18 @@
 
 .contact-page .name {
   font-weight: 900;
+}
+
+.contact-form-mobile {
+  margin-top: 5px;
+}
+
+.contact-form-mobile .open-contact-form {
+  font-size: 15px;
+}
+
+.contact-information.visible-phone .name {
+  margin-top: 10px;
 }
 
 .contact-information.visible-phone ul {
@@ -133,7 +150,6 @@ body {
 }
 
 .contact-information-list {
-    position: relative;
     overflow: hidden;
     margin-top: 10px;
 }
@@ -153,7 +169,7 @@ body {
 
 .contact-information-list li:not(:first-child) {
   border-left: 1px solid #ccc;
-  padding-left: 10px;
+  padding-left: 6px;
 }
 
 /* MODAL */
@@ -214,4 +230,13 @@ div.wpcf7-mail-sent-ok {
 .article p,
 .article ul li {
   line-height: 25px;
+}
+
+.article img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+blockquote {
+  border-left: none;
 }
