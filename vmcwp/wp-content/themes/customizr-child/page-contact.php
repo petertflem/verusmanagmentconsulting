@@ -36,7 +36,7 @@ Template Name: Contact Page
                     <h1>Rebecca Hansen</h1>
                     <h2 class="title">Lederutvikler</h2>
                     <a href="tel:+4793845559">+47 938 45 559</a>
-                    <a href="mailto:rebecca@vmconsulting.no">rebecca@vmconsulting.no</a>
+                    <a class="mail" href="mailto:rebecca@vmconsulting.no">rebecca@vmconsulting.no</a>
                     <a href="#">LinkedIn</a>
 
                     <div class="contact-form">

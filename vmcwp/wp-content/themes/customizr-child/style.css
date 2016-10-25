@@ -34,10 +34,20 @@
   text-decoration: underline;
   display: block;
 }
+.contact-page .contact-information .mail {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
 
 .title {
-  margin-top: -9px;
+  margin-top: -7px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-top: -11px;
+  }
 }
 
 #tc-page-wrap {
