@@ -15,6 +15,8 @@
   align-items: center;
 }
 
+/* CONTACT PAGE */
+
 .open-contact-form {
   margin-top: 20px;
   text-decoration: underline;
@@ -48,14 +50,6 @@
   .title {
     margin-top: -11px;
   }
-}
-
-#tc-page-wrap {
-  position: static;
-}
-
-body {
-  position: relative;
 }
 
 .contact-information-list {
@@ -135,4 +129,17 @@ div.wpcf7-mail-sent-ok {
 
 blockquote {
   border-left: none;
+}
+
+/* GLOBAL */
+#tc-page-wrap {
+  position: static;
+}
+
+body {
+  position: relative;
+}
+
+ul li:not(:first-child) {
+  margin-top: 2px;
 }
