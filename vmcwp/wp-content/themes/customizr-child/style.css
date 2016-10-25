@@ -15,130 +15,29 @@
   align-items: center;
 }
 
-.reb1 {
-  background: url('assets/images/reb1.jpg');
-}
-
-.reb2 {
-  background: url('assets/images/reb2.jpg');
-}
-
-.reb3 {
-  background: url('assets/images/reb3.jpg');
-}
-
-.reb4 {
-  background: url('assets/images/reb4.jpg');
-}
-
 .open-contact-form {
+  margin-top: 20px;
   text-decoration: underline;
   font-size: 16px;
-  font-weight: bold;
   text-transform: uppercase;
 }
 
-@media (max-width: 767px) {
-  .visible-phone .reb2 {
-    width: 80%;
-    text-align: center;
-  }
-
-  .contact-page {
-      margin-top: 20px;
-  }
-
-  .contact-page,
-  .open-contact-form {
-    text-align: center;
-  }
-
-  img.profile-picture {
-    width: 258px;
-  }
+.contact-page {
+  text-align: center;
 }
 
-.contact-picture {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 0px;
-
-  width: 250px;
-  height: 250px;
-}
-
-.contact-information.hidden-phone {
-  font-size: 18px;
-}
-
-.phonenumber, .email, .linkedin {
-  font-size: 17px;
-}
-
-@media (min-width: 980px) and (max-width: 1200px) {
-  .contact-information.hidden-phone {
-    font-size: 17px;
-  }
-
-  .phonenumber, .email, .linkedin {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-  .contact-information.hidden-phone {
-    font-size: 16px;
-  }
-
-  .phonenumber, .email, .linkedin {
-    font-size: 15px;
-  }
-}
-
-.contact-page .name {
-  font-weight: 900;
-}
-
-.contact-form-mobile {
+.contact-form {
   margin-top: 5px;
 }
 
-.contact-form-mobile .open-contact-form {
-  font-size: 15px;
-}
-
-.contact-information.visible-phone .name {
-  margin-top: 10px;
-}
-
-.contact-information.visible-phone ul {
-  list-style: none;
-  -webkit-padding-start: 0;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  margin: 0;
-}
-
-.contact-information.visible-phone .name {
-  font-size: 20px;
-}
-
-.contact-information.visible-phone li:not(:last-child) {
-  margin-bottom: 2px;
-}
-
-.contact-information.visible-phone li.title {
-  margin-bottom: 5px;
-}
-
-.contact-page .title {
-  font-weight: 600;
-}
-
 .contact-page .contact-information a {
-  font-weight: 600;
   text-decoration: underline;
+  display: block;
+}
+
+.title {
+  margin-top: -9px;
+  margin-bottom: 20px;
 }
 
 #tc-page-wrap {
@@ -153,23 +52,10 @@ body {
     overflow: hidden;
     margin-top: 10px;
 }
-.contact-information-list ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: -1px;
-    list-style: none;
-    padding: 0;
-}
-.contact-information-list li {
-    flex-grow: 0.1;
-    flex-basis: auto;
-}
 
-.contact-information-list li:not(:first-child) {
-  border-left: 1px solid #ccc;
-  padding-left: 6px;
+.profile-picture {
+  width: 320px;
+  margin-top: 20px;
 }
 
 /* MODAL */
