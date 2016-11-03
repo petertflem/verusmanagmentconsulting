@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Article
+Template Name: Custom Page Example
 */
 ?>
 <?php do_action( '__before_main_wrapper' ); ##hook of the header with get_header ?>
-<div id="main-wrapper" class="article <?php echo implode(' ', apply_filters( 'tc_main_wrapper_classes' , array('container') ) ) ?>">
+<div id="main-wrapper" class="<?php echo implode(' ', apply_filters( 'tc_main_wrapper_classes' , array('container') ) ) ?>">
 
     <?php do_action( '__before_main_container' ); ##hook of the featured page (priority 10) and breadcrumb (priority 20)...and whatever you need! ?>
 
@@ -24,7 +24,7 @@ Template Name: Article
                                 <?php the_post(); ?>
 
                                 <?php do_action( '__before_article' ) ?>
-                                    <article <?php tc__f( '__article_selectors' ) ?>>
+                                    <article <?php czr_fn__f( '__article_selectors' ) ?>>
                                         <?php do_action( '__loop' ); ?>
                                     </article>
                                 <?php do_action( '__after_article' ) ?>

@@ -23,14 +23,7 @@ Template Name: Contact Page
         <div class="<?php echo implode(' ', apply_filters( 'tc_column_content_wrapper_classes' , array('row' ,'column-content-wrapper') ) ) ?>">
 
 
-
-            <?php do_action( '__before_article_container' ); ##hook of left sidebar?>
-
-
-
                 <div id="content" class="<?php echo implode(' ', apply_filters( 'tc_article_container_class' , array( CZR_utils::czr_fn_get_layout(  CZR_utils::czr_fn_id() , 'class' ) , 'article-container' ) ) ) ?>">
-
-
 
                   <div class="row-fluid contact-information">
                     <h1>Rebecca Hansen</h1>
@@ -68,11 +61,6 @@ Template Name: Contact Page
                   </div>
 
                 </div><!--.article-container -->
-
-
-
-           <?php do_action( '__after_article_container' ); ##hook of left sidebar ?>
-
 
 
         </div><!--.row -->
